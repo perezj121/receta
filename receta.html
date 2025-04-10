@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receta de Waffles</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffb347;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #ffffff;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      left: 1rem;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: -200px;
+      width: 200px;
+      height: 100%;
+      background-color: #ffb347;
+      padding-top: 60px;
+      transition: left 0.3s;
+    }
+
+    nav a {
+      display: block;
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #ffa233;
+    }
+
+    nav.active {
+      left: 0;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      color: #ff7f50;
+      text-align: center;
+    }
+
+    ul, ol {
+      margin-left: 2rem;
+    }
+
+    img, iframe {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 2rem;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    iframe {
+      max-width: 560px;
+      width: 100%;
+      height: 315px;
+    }
+
+    footer {
+      background-color: #ffb347;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <h1>Waffles Caseros</h1>
+  </header>
+
+  <nav id="side-menu">
+    <a href="#ingredientes">Ingredientes</a>
+    <a href="#pasos">Pasos</a>
+    <a href="#info">Información</a>
+    <a href="#video">Video</a>
+  </nav>
+
+  <div class="container">
+    <img class="hero-image" src="https://th.bing.com/th/id/OIP.Tiqhwh7i0Q7n0ZK09VXbUwHaEK?rs=1&pid=ImgDetMain" alt="Imagen grande de waffles">
+
+    <section id="ingredientes">
+      <h2>Ingredientes</h2>
+      <ul>
+        <li>2 tazas de harina de trigo</li>
+        <li>2 cucharadas de azúcar</li>
+        <li>1 cucharada de polvo de hornear</li>
+        <li>1/2 cucharadita de sal</li>
+        <li>2 huevos</li>
+        <li>1 y 3/4 tazas de leche</li>
+        <li>1/2 taza de mantequilla derretida</li>
+        <li>1 cucharadita de extracto de vainilla</li>
+      </ul>
+    </section>
+
+    <section id="pasos">
+      <h2>Pasos para Preparar</h2>
+      <ol>
+        <li>En un bowl grande, mezcla la harina, azúcar, polvo de hornear y sal.</li>
+        <li>En otro bowl, bate los huevos, luego añade la leche, la mantequilla derretida y la vainilla.</li>
+        <li>Une los ingredientes líquidos con los secos y mezcla hasta que quede una masa homogénea.</li>
+        <li>Calienta la wafflera y vierte la mezcla poco a poco.</li>
+        <li>Cocina durante 3-5 minutos o hasta que estén dorados.</li>
+        <li>Sírvelos con tus toppings favoritos: frutas, miel, crema, etc.</li>
+      </ol>
+    </section>
+
+    <section id="info">
+      <h2>Información Adicional</h2>
+      <p><strong>Tiempo de preparación:</strong> 10 minutos</p>
+      <p><strong>Tiempo de cocción:</strong> 15 minutos</p>
+      <p><strong>Porciones:</strong> 4-6 waffles</p>
+      <center>
+      <img src="https://th.bing.com/th/id/OIP.nJkHU_uZGjfddaVm_oZzbwHaE8?rs=1&pid=ImgDetMain" alt="Waffles deliciosos">
+    </center>
+    </section>
+
+    <section id="video">
+      <h2>Video de Preparación</h2>
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/yxGhAIxA4P8" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Recetas Dulces. Arianna Perez Morales.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('side-menu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
